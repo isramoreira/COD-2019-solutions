@@ -33,7 +33,7 @@ In *cars_controller.rb*:
 
 ```ruby
 def index
-  @cars = Car.where(nil) # creates an anonymous scope
+  @cars = Car.all
   @cars = @cars.brand(params[:brand]) if params[:brand].present?
   @cars = @cars.price_and_under(params[:max_price]) if params[:max_price].present?
   
