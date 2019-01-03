@@ -50,3 +50,30 @@ Country.create([{country_name: 'Canada', current_population: 36710000},
                 ])
 ```
 
+*Activity 2: Link the models*
+
+Students will need to do several things. You may want to walk students through the steps necessary (try to get them to come up with the proper steps and don't do hand-holding that's not necessary)
+
+1. Update the Country table schema:
+```bash
+$ rails generate migration AddContinentIdToCountries continent_id:integer
+$ rails db:migrate
+```
+
+2. Update the country records (students can do this manually, or they can write a script, but with 7 entries, it shouldn't be faster either way)
+```ruby
+Country.find(1).update(continent_id: '1')
+# ... and so on
+```
+
+3. Finally, update the model files themselves for both models:
+
+In *country.rb*, add
+```ruby
+  belongs_to :continent
+```
+
+In *continent.rb*, add
+```ruby
+  has_many :countries
+```
