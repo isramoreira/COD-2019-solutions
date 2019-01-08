@@ -1,0 +1,19 @@
+/** Activity A, part 1 **/
+
+h1 {
+  font-family: Courier; 
+  font-size: 25px; 
+  text-align: center;
+}
+
+/** Activity A, part 2 **/
+
+.byline {
+  text-align: center;
+}
+
+p {
+  text-align: left; 
+  font-size: 15px;
+}
+
