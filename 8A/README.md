@@ -52,8 +52,6 @@ Country.create([{country_name: 'Canada', current_population: 36710000},
 
 *Activity 2: Link the models*
 
-Students will need to do several things. You may want to walk students through the steps necessary (try to get them to come up with the proper steps and don't do hand-holding that's not necessary)
-
 1. Update the Country table schema:
 ```bash
 $ rails generate migration AddContinentIdToCountries continent_id:integer
